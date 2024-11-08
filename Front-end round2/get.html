@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>ค่าที่รับมา</h1>
+        <p id="display_text"></p>
+
+        <script>
+            // ดึงค่าจาก localStorage
+            const textValue = localStorage.getItem("text_value");
+
+            // แสดงค่าที่รับมาในหน้า
+            document.getElementById("display_text").innerText = textValue ? textValue : "ไม่มีข้อมูลที่ส่งมา";
+
+            // ลบข้อมูลออกจาก localStorage หลังจากแสดงผล
+            localStorage.removeItem("text_value");
+        </script>
+    </body>
+</html>

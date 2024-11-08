@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form id="myForm">
+            <input type="text" id="text_value" placeholder="Enter some text">
+            <button type="button" onclick="submitForm()">Send</button>
+        </form>
+
+        <script>
+            function submitForm() {
+                // รับค่าจากฟิลด์ input
+                const textValue = document.getElementById("text_value").value;
+
+                // เก็บค่าลงใน localStorage
+                localStorage.setItem("text_value", textValue);
+
+                // เปลี่ยนหน้าไปยัง get.html
+                window.location.href = "get.html";
+            }
+        </script>
+    </body>
+</html>
