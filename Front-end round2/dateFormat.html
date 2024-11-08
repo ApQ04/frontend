@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        date inpur</head>
+    <body>
+        <form id="getDate">
+        <input type="date" id="dateInput">
+        
+        <button type="button" onclick="getDateParts()">get date</button>
+        <br>
+        <label for="date" id="result" ></label>
+        <br>
+        <label for="date" id="result2" ></label>
+        <br>
+        <label for="date" id="result3" ></label>
+    </form>
+    
+    </body>
+
+    <script>
+        function getDateParts() {
+            const dateInput = document.getElementById("dateInput").value;
+            
+            if (dateInput) {
+                // สร้าง Date object จากค่าใน input
+                const date = new Date(dateInput);
+                
+                // ดึงค่า วัน เดือน ปี จาก Date object
+                const day = date.getDate();
+                const month = date.getMonth() + 1; // เดือนใน JavaScript เริ่มจาก 0-11 จึงต้อง +1
+                const year = date.getFullYear();
+
+                const monthNames = [
+                    "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+                const month2 = monthNames[date.getMonth()];
+                const thYear = year+543;
+
+                const thaiMonthNames = [
+                    "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+                    "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+                ];
+                const month3 = thaiMonthNames[date.getMonth()];
+                
+                // แสดงผลลัพธ์
+                document.getElementById("result").textContent = `${day}, ${month},${year}`;
+                document.getElementById("result2").textContent = `${day}, ${month2},${year}`;
+                document.getElementById("result3").textContent = `${day}, ${month3},${thYear}`;
+            } 
+        }
+    </script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 เพื่อรองรับภาษาไทย -->
+    <meta charset="UTF-8">
+    <!-- ปรับให้หน้าเว็บรองรับการแสดงผลบนอุปกรณ์พกพา -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ตั้งชื่อเอกสารเป็น "Streaming Promotion" -->
+    <title>Streaming Promotion</title>
+    <!-- เชื่อมโยงกับไฟล์ CSS ที่อยู่ในไฟล์ styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- กล่องที่ใช้แสดงข้อมูลโปรโมชั่นแต่ละประเภท -->
+        <div class="box1">
+            <!-- แสดงโปรโมชั่นระดับ "Enterprise" -->
+            <div class="streaming_promotion_type" id="enterprice">
+                <span class="price-label">Enterprise</span>
+                <span class="price">$1999</span>
+            </div>
+            <!-- แสดงโปรโมชั่นระดับ "Professional" -->
+            <div class="streaming_promotion_type" id="professonal">
+                <span class="price-label">Professional</span>
+                <span class="price">$799</span>
+            </div>
+            <!-- แสดงโปรโมชั่นระดับ "Standard" -->
+            <div class="streaming_promotion_type" id="standard">
+                <span class="price-label">Standard</span>
+                <span class="price">$349</span>
+            </div>
+
+            <!-- ช่องทางการชำระเงินด้วย PayPal -->
+            <div class="payment_type" id="paypal">
+                <span class="payment_type-label">PayPal</span>
+            </div>
+            <!-- ช่องทางการชำระเงินด้วยเช็ค -->
+            <div class="payment_type" id="checks">
+                <span class="payment_type-label">Checks</span>
+            </div>
+            <!-- ช่องทางการชำระเงินด้วยเงินสด -->
+            <div class="payment_type" id="cash">
+                <span class="payment_type-label">Cash</span>
+            </div>
+        </div>
+
+        <!-- กล่องแสดงรายละเอียดและแบบฟอร์มการสั่งซื้อ -->
+        <div class="box2">
+            <div class="detail">
+                <!-- แสดงหัวข้อ "Software Package" -->
+                <h1 id="title">Software Package</h1>
+                <form id="recipte_form" onsubmit="return validateForm()">
+                    <hr>
+                    <!-- แสดงราคาที่เลือก -->
+                    <div class="info-line">
+                        <label id="price">Price : </label>
+                        <label id="price_value">xxx.xx$</label>
+                    </div>
+                    <hr>
+                    <!-- แสดงประเภทการชำระเงินที่เลือก -->
+                    <div class="info-line">
+                        <label id="paytype">Payment Type<sup>*</sup> : </label>
+                        <label id="paytype_value">PayPal/Checks/Cash</label>
+                    </div>
+                    <hr>
+                    <!-- เลือกคำนำหน้า (Prefix) เช่น Mr, Miss, Mrs -->
+                    <div class="prefix-container">
+                        <label id="prefix">Prefix<sup>*</sup> :</label>
+                        <select id="prefix-select">
+                            <option value="" disabled selected>Please select</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Mrs">Mrs</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <!-- กรอกชื่อผู้ซื้อ -->
+                    <div class="info-line">
+                        <label id="name">Name<sup>*</sup> :</label>
+                        <input type="text" id="name_value">
+                    </div>
+                    <hr>
+                    <!-- กรอกเบอร์โทรศัพท์ -->
+                    <div class="info-line">
+                        <label id="phone">Phone<sup>*</sup> :</label>
+                        <input type="text" id="phone_value">
+                    </div>
+                    <hr>
+                    <!-- กรอกที่อยู่ผู้ซื้อ -->
+                    <div class="info-line">
+                        <label id="address">Address<sup>*</sup> :</label>
+                        <textarea name="" id="address_value"></textarea>
+                    </div>
+                    <hr>
+                    <!-- ปุ่มยืนยันการซื้อ -->
+                    <button type="submit">Buy</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- กล่องสำหรับแสดงใบเสร็จ -->
+        <div class="box3" id="box3">
+            <div class="detail2">
+                <!-- หัวข้อใบเสร็จ -->
+                <h1 id="title2">Receipt</h1>
+                <hr>
+                <!-- แสดงราคาที่สั่งซื้อ -->
+                <div class="info-line">
+                    <label id="price">Price : </label>
+                </div>
+                <hr>
+                <!-- แสดงประเภทการชำระเงินที่เลือก -->
+                <div class="info-line">
+                    <label id="paytype">Payment Type<sup>*</sup> : </label>
+                </div>
+                <hr>
+                <!-- แสดงคำนำหน้า -->
+                <div class="info-line">
+                    <label id="prefix">Prefix<sup>*</sup> :</label>
+                </div>
+                <hr>
+                <!-- แสดงชื่อผู้ซื้อ -->
+                <div class="info-line">
+                    <label id="name">Name<sup>*</sup> :</label>
+                </div>
+                <hr>
+                <!-- แสดงเบอร์โทรศัพท์ผู้ซื้อ -->
+                <div class="info-line">
+                    <label id="phone">Phone<sup>*</sup> :</label>
+                </div>
+                <hr>
+                <!-- แสดงที่อยู่ผู้ซื้อ -->
+                <div class="info-line">
+                    <label id="address">Address<sup>*</sup> :</label>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!-- เชื่อมโยงไฟล์ JavaScript เพื่อจัดการฟังก์ชันต่าง ๆ -->
+    <script src="script.js"></script>
+</body>
+</html>

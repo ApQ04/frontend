@@ -1,0 +1,252 @@
+/* กำหนดค่าเริ่มต้นให้ HTML และ Body จัดศูนย์กลางเนื้อหา */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* จัดระยะห่างระหว่าง box1 และ box2 */
+.container {
+    display: flex;
+    gap: 50px;
+}
+
+/* กำหนดสไตล์ให้กับ box1 */
+.box1 {
+    width: 400px;
+    height: 380px;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 15px;
+    background-color: rgb(183, 245, 245);
+    position: relative;
+    left: 20px;
+}
+
+/* กำหนดสไตล์ให้กับ box2 */
+.box2 {
+    width: 400px;
+    height: 380px;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 15px;
+    background-color: rgb(183, 245, 245);
+}
+
+/* ซ่อน box3 ไว้เมื่อไม่ได้ใช้งาน */
+.box3 {
+    display: none;
+    top: 120px;
+    width: 360px;
+    height: 330px;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 15px;
+    background-color: rgb(183, 245, 245);
+    margin-top: 20px;
+}
+
+/* สไตล์กล่องโปรโมชัน */
+.streaming_promotion_type {
+    background-color: cadetblue;
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* สไตล์เมื่อมีการชี้เมาส์ที่โปรโมชัน */
+.streaming_promotion_type:hover {
+    background-color: lightseagreen;
+    transform: scale(1.05);
+}
+
+/* สไตล์เมื่อโปรโมชันถูกคลิก */
+.active {
+    background-color: rgb(23, 191, 45);
+}
+
+/* กำหนดตำแหน่งเฉพาะของโปรโมชันแต่ละประเภท */
+#enterprice {
+    top: 10px;
+    left: 10px;
+}
+
+#professonal {
+    top: 10px;
+    left: 140px;
+}
+
+#standard {
+    top: 10px;
+    left: 270px;
+}
+
+/* กำหนดสไตล์ label ของราคา */
+.price-label {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+/* กำหนดสไตล์ของราคา */
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* สไตล์กล่องวิธีการชำระเงิน */
+.payment_type {
+    background-color: rgb(246, 241, 141);
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* สไตล์เมื่อมีการชี้เมาส์ที่วิธีการชำระเงิน */
+.payment_type:hover {
+    background-color: rgb(124, 136, 32);
+    transform: scale(1.05);
+}
+
+/* สไตล์เมื่อวิธีการชำระเงินถูกคลิก */
+.active2 {
+    background-color: rgb(191, 59, 23);
+}
+
+/* กำหนดตำแหน่งเฉพาะของวิธีการชำระเงินแต่ละประเภท */
+#paypal {
+    bottom: 10px;
+    left: 10px;
+}
+
+#checks {
+    bottom: 10px;
+    left: 140px;
+}
+
+#cash {
+    bottom: 10px;
+    left: 270px;
+}
+
+/* สไตล์ label ของวิธีการชำระเงิน */
+.payment_type-label {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* สไตล์รายละเอียด */
+.detail {
+    background-color: white;
+    width: 350px;
+    height: 320px;
+    box-shadow: 10px 10px 10px grey;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* สไตล์หัวข้อ h1 ใน detail */
+.detail h1 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* สไตล์ label ใน detail */
+.detail label {
+    text-align: left;
+    margin: 10px 0;
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+/* สไตล์เส้นคั่น hr ใน detail */
+.detail hr {
+    margin: 1px 0;
+    border: 1px solid #000000;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+/* กำหนดสไตล์ของ detail2 ที่ใช้ในกล่องใบเสร็จ */
+.detail2 {
+    background-color: white;
+    width: 300px;
+    height: 270px;
+    box-shadow: 10px 10px 10px grey;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.detail2 h1 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.detail2 label {
+    text-align: left;
+    margin: 10px 0;
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+.detail2 hr {
+    margin: 1px 0;
+    border: 1px solid #000000;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+/* สไตล์เส้นบรรทัด info-line และ prefix-container */
+.info-line, .prefix-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.info-line label {
+    margin-right: 1px;
+}
+
+/* สไตล์ปุ่ม Buy */
+button {
+    margin-top: 5px;
+    height: 50px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-left: 20px;
+}

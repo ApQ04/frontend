@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form</title>
+</head>
+<body>
+    <div class="in">
+        <form id="a">
+            <label for="in">input name</label>
+            <input type="text" placeholder="name" id="name">
+            <label for="in" id="a1"></label>
+            <br>
+            <button type="button" id="addButton">Add</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("addButton").addEventListener("click", function () {
+            // สร้าง container ใหม่สำหรับกลุ่มฟอร์ม
+            const newFormGroup = document.createElement("div");
+
+            // สร้างและตั้งค่า element แต่ละตัว
+            const label = document.createElement("label");
+            label.textContent = "input name";
+            label.setAttribute("for", "in");
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = "name";
+            
+            const dynamicLabel = document.createElement("label");
+            dynamicLabel.setAttribute("for", "in");
+
+            const lineBreak = document.createElement("br");
+
+            // ใส่องค์ประกอบใหม่เข้าในกลุ่มฟอร์ม
+            newFormGroup.appendChild(label);
+            newFormGroup.appendChild(input);
+            newFormGroup.appendChild(dynamicLabel);
+            newFormGroup.appendChild(lineBreak);
+
+            // เพิ่มกลุ่มฟอร์มใหม่เข้าไปใน div.in
+            document.querySelector(".in").appendChild(newFormGroup);
+
+            // อัปเดตเนื้อหาของ label ใหม่ด้วยค่าจาก input เมื่อตั้งค่าแล้ว
+            input.addEventListener("input", function () {
+                dynamicLabel.textContent = input.value;
+            });
+        });
+    </script>
+</body>
+</html>
