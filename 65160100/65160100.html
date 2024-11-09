@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 เพื่อรองรับภาษาไทย -->
+    <meta charset="UTF-8">
+    <!-- ปรับให้หน้าเว็บรองรับการแสดงผลบนอุปกรณ์พกพา -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ตั้งชื่อเอกสารเป็น "Streaming Promotion" -->
+    <title>Frontend</title>
+    <!-- เชื่อมโยงกับไฟล์ CSS ที่อยู่ในไฟล์ styles.css -->
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+    <br>
+
+    <b style="font-size: 30px;" >Software Engineering Online Course</b>
+    <hr color="grey">
+    <br>
+    <form id="info_form" onsubmit="return validateForm()">
+        <div class="Course">
+            <div class="package" id="package_b">
+                <label for="packkage_a"><b>Automated Testing -฿100</b></label>
+                <select id="package_a_count">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
+            </div>
+            <div class="package" id="package_b">
+                <label for="packkage_b"><b>Advance Machine Learning -฿200</b></label>
+                <select id="package_b_count">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
+            </div>
+            <div class="package" id="package_c">
+                <label for="packkage_c"><b>Cyber-Security Technology -฿300</b></label>
+                <select id="package_c_count">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
+            </div>
+            <div class="package" id="package_d">
+                <label for="packkage_d"><b>Agile Bussiness Analysis -฿400</b></label>
+                <select id="package_d_count">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
+            </div>
+            <br>
+            
+           
+            <div class="code">
+                <label for="coupon" id="coupon">Coupon Code (SAVE10 for 10% off)</label><br>
+                <input type="text" id="coupon_value">
+            </div>
+            <br>
+            <div class="name">
+                <label for="name" id="name">Name (required)</label><br>
+                <input type="text" id="name_value">
+            </div>
+            <br>
+            <div class="email">
+                <label for="email" id ="email">Email (required)</label><br>
+                <input type="text" id="email_value">
+            </div>
+            <br>
+            <div class="phone">
+                <label for="phone" id="phone">Phone (required)</label><br>
+                <input type="text" id="phone_value">
+            </div>
+            <br>
+       
+        </div>
+        <button type="submit">Proceed For Order Summary</button>
+    </form>
+    <br>
+    <br>
+    <div class="summary">
+        <div class="order_title"><b>Order summary</b></div>
+        
+        <div class="package_report">
+            <div class="package_report" id=""></div>
+            <div class="package_report" id="package_report_a"></div>
+            <div class="package_report" id="package_report_b"></div>
+            <div class="package_report" id="package_report_c"></div>
+            <div class="package_report" id="package_report_d"></div>
+        </div>
+        <div id="total_price"><b>Total price:</b></div><br>
+        <div id="discount"><b>Discount:</b></div><br>
+        <div id="price_after_discount"><b>Price after Discount:</b></div><br>
+        <div id="tax"><b>Tax(7%):</b></div><br>
+        <div id="net_price"><b>Net Price:</b></div><br>
+
+    </div>
+    <!-- เชื่อมโยงไฟล์ JavaScript เพื่อจัดการฟังก์ชันต่าง ๆ -->
+    <script src="script.js"></script>
+</body>
+
+</html>

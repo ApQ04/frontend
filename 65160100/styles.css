@@ -1,0 +1,103 @@
+/* กำหนดค่าเริ่มต้นให้ HTML และ Body จัดศูนย์กลางเนื้อหา */
+html {
+    height: 100%;
+    margin-left: 500px;
+    background-color: rgb(241, 241, 241);
+    
+}
+
+body {
+    background-color: rgb(255, 254, 254);
+    width: 500px;
+    box-shadow: 10px 10px 10px grey;
+    vertical-align: baseline;
+    border-radius: 15px;
+}
+
+.package {
+    width: 450px;
+    height: 30px;
+    background-color: rgb(172, 172, 172);
+
+    text-align: left;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 15px;
+}
+
+.package:hover {
+    font-size: 20px;
+    width: 460px;
+    height: 32px;
+    background-color: rgb(187, 235, 235);
+    transform: scale(1.05);
+}
+
+#package_a {
+    width: 300px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+}
+
+button {
+    background-color: green;
+    color: aliceblue;
+    margin-top: 10px;
+    margin-left: 25px;
+    height: 40px;
+    width: 450px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.summary {
+    background-color: rgb(234, 254, 255);
+    width: 450px;
+    height: 400px;
+    vertical-align: baseline;
+    display: none;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 15px;
+}
+
+#coupon, #name, #email, #phone {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 25px;
+}
+.order_title{
+    margin-left:  25px;
+    font-size: x-large;
+}
+
+.package_report{
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#total_price,#discount,#price_after_discount,#tax,#net_price{
+    font-weight: bold;
+    margin-left: 25px;
+    color: rgb(78, 78, 78);
+}
+
+
+
+
+#coupon_value,#name_value,#email_value,#phone_value {
+    background-color: rgb(255, 236, 236);
+    height: 25px;
+    width: 450px;
+    margin-top: 10px;
+    margin-left: 25px;
+    
+    border-radius: 5px;
+}
